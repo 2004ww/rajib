@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdur Labib | Professional Video Editor & AI Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f5ff 0%, #e6f0ff 100%);
+            color: #333;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            border-radius: 3px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(106, 17, 203, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(106, 17, 203, 0.3);
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 7px 25px rgba(0, 0, 0, 0.07);
+            border: 1px solid #eef2f7;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            border-color: #d6e4ff;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #6a11cb;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #6a11cb;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #2c3e50;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        /* About Section */
+        #about {
+            background: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .profile-img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            flex-shrink: 0;
+        }
+        
+        .about-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+            font-size: 17px;
+            color: #555;
+        }
+        
+        /* Skills Section */
+        #skills {
+            background: linear-gradient(135deg, #f8f9fc 0%, #eef2f6 100%);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-card {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .skill-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 30px;
+        }
+        
+        .skill-card h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* Services Section */
+        .services-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 12px 25px;
+            margin: 0 10px;
+            background: white;
+            border: 1px solid #e0e5ec;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .tab-btn.active {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            padding: 25px;
+        }
+        
+        .service-card i {
+            font-size: 40px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* Video Gallery Section */
+        #gallery {
+            background: white;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .video-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-card iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+        
+        .video-info {
+            padding: 15px;
+            background: white;
+        }
+        
+        .video-info h3 {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        
+        .video-info p {
+            color: #777;
+            font-size: 14px;
+        }
+        
+        /* Testimonials Section */
+        #testimonials {
+            background: linear-gradient(135deg, #f8f9fc 0%, #eef2f6 100%);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            position: relative;
+            padding: 30px;
+        }
+        
+        .testimonial-card i {
+            font-size: 30px;
+            color: #6a11cb;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .client-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .client-name {
+            font-weight: 600;
+        }
+        
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 250px;
+        }
+        
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(106, 17, 203, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            color: white;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        /* FAQ Section */
+        #faq {
+            background: white;
+        }
+        
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accordion-header {
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+        
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: white;
+        }
+        
+        .accordion-content p {
+            padding: 20px 0;
+        }
+        
+        .accordion-item.active .accordion-content {
+            max-height: 300px;
+        }
+        
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #f8f9fc 0%, #eef2f6 100%);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e0e5ec;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo span {
+            color: #6a11cb;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links li {
+            margin: 0 15px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #6a11cb;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-img {
+                margin-bottom: 30px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 0;
+                transition: left 0.3s;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .section-title {
+                font-size: 30px;
+            }
+            
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            
+            .hero-content p {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Abdur <span>Labib</span></a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bringing Stories to Life Through Video</h1>
+                <p>Professional video editing, motion graphics, and AI-enhanced content creation for YouTube creators, businesses, and brands.</p>
+                <a href="#contact" class="btn">Let's Work Together</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <img src="https://i.ibb.co/mCSc7r2d/Picsart-24-04-28-22-47-32-422.png" alt="MD Rajibul Islam" class="profile-img">
+                <div class="about-text">
+                    <h2>MD Rajibul Islam (Abdur Labib)</h2>
+                    <p>I'm a professional video editor and visual storyteller based in Dhaka, Bangladesh, with over 5 years of experience crafting compelling video content.</p>
+                    <p>My editing style focuses on clean, engaging narratives that keep audiences watching. I combine traditional editing techniques with cutting-edge AI tools to deliver high-quality content faster without sacrificing creativity.</p>
+                    <p>At Abdur Labib, it's not just me working alone. Behind the scenes, a small but mighty crew of video editors, motion graphics artists, scriptwriters, and AI engineers collaborate to bring your ideas to life.</p>
+                    <p>Every project is handled with the combined expertise of people who live and breathe storytelling—whether it's on camera, in your thumb-stopping thumbnail, or in an AI-generated voiceover.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-card card">
+                    <div class="skill-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Video Editing</h3>
+                    <p>Adobe Premiere Pro, Final Cut Pro, DaVinci Resolve</p>
+                </div>
+                <div class="skill-card card">
+                    <div class="skill-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Motion Graphics</h3>
+                    <p>After Effects, Blender, Cinema 4D</p>
+                </div>
+                <div class="skill-card card">
+                    <div class="skill-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Photoshop, Illustrator, Canva</p>
+                </div>
+                <div class="skill-card card">
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Tools</h3>
+                    <p>ChatGPT, Midjourney, Adobe Sensei, AI Voiceovers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-tabs">
+                <button class="tab-btn active" data-tab="video-services">Video Services</button>
+                <button class="tab-btn" data-tab="ai-services">AI Services</button>
+            </div>
+            
+            <div id="video-services" class="tab-content active">
+                <div class="services-grid">
+                    <div class="service-card card">
+                        <i class="fab fa-youtube"></i>
+                        <h3>YouTube Editing</h3>
+                        <p>Engaging edits for vlogs, tutorials, reviews, and more with optimized pacing, transitions, and effects.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-video"></i>
+                        <h3>Documentary Edits</h3>
+                        <p>Thoughtful storytelling with proper narrative flow, b-roll integration, and emotional impact.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Talking-head Videos</h3>
+                        <p>Clean edits for interviews, presentations, and educational content with professional polish.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-camera"></i>
+                        <h3>Vlogs</h3>
+                        <p>Dynamic edits that maintain authenticity while enhancing entertainment value.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Product Promos</h3>
+                        <p>Highlight features and benefits with compelling visuals and persuasive pacing.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Corporate Edits</h3>
+                        <p>Professional videos for businesses, training, and internal communications.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="ai-services" class="tab-content">
+                <div class="services-grid">
+                    <div class="service-card card">
+                        <i class="fas fa-keyboard"></i>
+                        <h3>Prompt Writing</h3>
+                        <p>Expertly crafted prompts for AI tools to generate exactly what you need.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-scroll"></i>
+                        <h3>Script Writing</h3>
+                        <p>AI-assisted script writing that maintains human authenticity and engagement.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-photo-film"></i>
+                        <h3>AI Video/Image Generation</h3>
+                        <p>Create custom visuals and video elements using the latest AI tools.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-microphone"></i>
+                        <h3>AI Voiceovers</h3>
+                        <p>Natural-sounding male and female voices in multiple languages and accents.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-paintbrush"></i>
+                        <h3>AI Image Editing</h3>
+                        <p>Enhance, restore, or transform images with AI-powered tools.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-thumbs-up"></i>
+                        <h3>AI Thumbnail Design</h3>
+                        <p>Data-driven thumbnail designs optimized for maximum click-through rates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">YouTube Video Gallery</h2>
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <div class="video-card card">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Travel Vlog - Bali Adventure</h3>
+                        <p>Cinematic Travel Video</p>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="video-card card">
+                    <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Tech Product Review</h3>
+                        <p>Detailed Analysis with B-Roll</p>
+                    </div>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="video-card card">
+                    <iframe src="https://www.youtube.com/embed/JGwWNGJdvx8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Music Video Production</h3>
+                        <p>Creative Visual Storytelling</p>
+                    </div>
+                </div>
+                
+                <!-- Video 4 -->
+                <div class="video-card card">
+                    <iframe src="https://www.youtube.com/embed/7wtfhZwyrcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Corporate Brand Video</h3>
+                        <p>Professional Business Presentation</p>
+                    </div>
+                </div>
+                
+                <!-- Video 5 -->
+                <div class="video-card card">
+                    <iframe src="https://www.youtube.com/embed/LDU_Txk06tM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Cooking Tutorial</h3>
+                        <p>Step-by-Step Recipe Guide</p>
+                    </div>
+                </div>
+                
+                <!-- Video 6 -->
+                <div class="video-card card">
+                    <iframe src="https://www.youtube.com/embed/RgKAFK5djSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Fitness Challenge</h3>
+                        <p>30-Day Transformation Journey</p>
+                    </div>
+                </div>
+                
+                <!-- Video 7 -->
+                <div class="video-card card">
+                    <iframe src="https://www.youtube.com/embed/OPf0YbXqDm0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Documentary Short</h3>
+                        <p>Social Issue Exploration</p>
+                    </div>
+                </div>
+                
+                <!-- Video 8 -->
+                <div class="video-card card">
+                    <iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Music Performance</h3>
+                        <p>Live Session Recording</p>
+                    </div>
+                </div>
+                
+                <!-- Video 9 -->
+                <div class="video-card card">
+                    <iframe src="https://www.youtube.com/embed/V-_O7nl0Ii0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Educational Content</h3>
+                        <p>Animated Explanation Video</p>
+                    </div>
+                </div>
+                
+                <!-- Video 10 -->
+                <div class="video-card card">
+                    <iframe src="https://www.youtube.com/embed/3tmd-ClpJxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Product Launch</h3>
+                        <p>Exciting Reveal Video</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Abdur Labib transformed our corporate training videos into engaging content that our employees actually want to watch. The AI-enhanced scripts and professional editing made all the difference.</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="client-img">
+                        <div>
+                            <div class="client-name">John Smith</div>
+                            <div>CEO, TechSolutions</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Working with Rajibul has been a game-changer for my YouTube channel. My subscriber count doubled after implementing his editing style and thumbnail designs. The AI tools he uses save me so much time!</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="client-img">
+                        <div>
+                            <div class="client-name">Sarah Johnson</div>
+                            <div>Travel Vlogger</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>The documentary edit exceeded all our expectations. Rajibul understood exactly how to pace the story for maximum emotional impact. His team delivered ahead of schedule and was a pleasure to work with.</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client" class="client-img">
+                        <div>
+                            <div class="client-name">Michael Chen</div>
+                            <div>Documentary Producer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfolio Gallery</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1574717024453-3545edf62f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Video Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Travel Vlog</h3>
+                        <p>Cinematic Editing</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Video Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Product Review</h3>
+                        <p>Detailed Analysis</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Video Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Corporate Video</h3>
+                        <p>Business Presentation</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Video Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Cooking Show</h3>
+                        <p>Tutorial Editing</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Video Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Nutrition Guide</h3>
+                        <p>Educational Content</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Video Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Music Video</h3>
+                        <p>Creative Editing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What are your rates?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Pricing varies based on project complexity, duration, and specific requirements. Basic video editing starts at $50 per minute of final content. AI services start at $30 per task. Contact me with your project details for an accurate quote.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>How many revisions do you allow?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>I include 2 rounds of revisions in my standard pricing. Additional revisions can be arranged at an hourly rate. For AI services, we provide unlimited iterations until you're satisfied with the output.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What's your typical turnaround time?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>For a standard 10-minute video, turnaround is 3-5 business days. Rush services are available for an additional fee. AI services typically deliver within 24-48 hours depending on complexity.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What file formats do you deliver?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Final videos are delivered in MP4 (H.264) format by default, but I can provide any format you need (MOV, AVI, ProRes, etc.). For AI services, we provide standard image formats (JPG, PNG) or specified formats.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Who owns the copyright to the final product?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>You retain full rights to all final deliverables. I only request permission to include the work in my portfolio unless otherwise specified. For AI-generated content, all rights are transferred to you upon payment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>abdurlabib1@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+880 1560065300 (WhatsApp)</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Dhaka, Bangladesh (Available Worldwide)</span>
+                        </div>
+                    </div>
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); padding: 60px 0; text-align: center; color: white;">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 20px;">Ready to bring your story to life?</h2>
+            <p style="font-size: 18px; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">Let's collaborate to create something amazing. Whether you need video editing, motion graphics, or AI-enhanced content, I'm here to help.</p>
+            <a href="#contact" class="btn" style="background: white; color: #6a11cb;">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Abdur <span>Labib</span></div>
+            <ul class="footer-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="copyright">© 2023 Abdur Labib. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#hero" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Services Tab Switching
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // FAQ Accordion
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            
+            header.addEventListener('click', () => {
+                // Close all other items
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('i').className = 'fas fa-chevron-down';
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+                const icon = item.querySelector('i');
+                icon.className = item.classList.contains('active') ? 
+                    'fas fa-chevron-up' : 'fas fa-chevron-down';
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.querySelector('.contact-form form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
